@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div style="padding: 10px;">
+    <div style="background-color: black; width: 100%; height: 100px;" id="header">
+        <h3 style="text-align: center; color: yellow;">Learning how to work with APIs</h3>
+        <div style="border-radius: 5px; width: 600px; height: 30px; background-color: white; font-size: 15px; margin-right: auto; margin-left: auto; padding-top: 4px; padding-left: 5px; " onclick="hello()">
+            <p id="kk" style=>Afghanistan</p>
+            <div id="countryDropdown" style="overflow: scroll; height: 300px; background-color: white;">
+
+            </div>
+        </div>
+    </div>
+</div>
+    <div style="padding: 10px; width: 33.3%; float: left;">
+    <div id="CountryName" style="font-size: 15px; color: white; background-color: gray; padding: 10px;" >
+        <h5>Country Name</h5>
+
+        <p id="NativeName">Native Name:---</p>
+        <p id="Capital">Capital:---</p>
+        <p id="Regin">Region:---</p>
+        <p id="Population">Population:---</p>
+        <p id="Languages">Languages:---</p>
+        <p id="TimeZone">Time Zone:---</p>
+
+    </div>
+</div>
+<div style="padding: 10px; float: left; width: 33.3%;">
+    <div>
+        <div style="height: 50px; background-color: black; color: white; text-align: center; padding-top: 10px;"> <h5>Calling Code</h5></div>
+        <div style="height: 233px; background-color: yellow; text-align: center; padding-top: 50px; font-size: 70px;" id="calling">---</div>
+    </div>
+</div>
+<div style="padding: 10px; float: left; width: 33.3%;">
+    <img src="http://www.geonames.org/flags/x/br.gif" style="width: 100%; height: 283px;"  id="flag"  alt="">
+</div>
+<div style="padding: 10px; float: left; width: 33.3%;" >
+    <div style="height: 50px; background-color:gray; color: white; text-align: center; padding-top: 10px;"> <h5>Capital weather report</h5></div>
+    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" style="width: 100px; height: 100px; margin-left: 200px;" id="icon1">
+    <p id="windSpeed">Wind speen:---</p>
+    <p id="temprature">Temprature:---</p>
+    <p id="humidity">Humidity:---</p>
+    <p id="visibility">Visibility:---</p>
+</div>
+<div style="padding: 10px; float: left; width: 66.6%; height: 300px;">
+    <div id="map"></div>
+</div>
+<script>
+    function initMap() {
+        let myLatLng = {lat: -34.397, lng: 150.644};
+
+        let map = new google.maps.Map(document.getElementById("map"), {
+        center: myLatLng,
+        zoom: 8
+        });
+
+        let marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: "your indented location"
+        })
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key="async defer></script>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="apis.js"></script>
+
+</script>
+</body>
+</html>
